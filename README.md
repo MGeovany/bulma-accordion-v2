@@ -1,2 +1,2 @@
 # bulma-accordion-v2
-Created with CodeSandbox
+Bulma Accordion created with a CSS framework Bulma
