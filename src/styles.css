@@ -5,13 +5,14 @@
 }
 
 .container-accordion {
-  width: 340px;
+  width: 400px;
   height: 100%;
   position: fixed;
   top: 0;
   right: 0;
 
   background-color: white;
+  border-left: 2px solid #f0f3f5;
 }
 
 .circle {
@@ -19,15 +20,17 @@
   height: 50px;
   border-radius: 50%;
   color: white;
-  background-color: #176a78;
   font-size: 24px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin: 1rem;
+  margin: 1rem 0 1rem 2rem;
 }
-.card-header:first-child: {
-  border-bottom: 7px solid #f2e177;
+
+/* select the second div on section-accordion */
+
+.container-accordion > div:nth-child(2) {
+  border: 1px solid red;
 }

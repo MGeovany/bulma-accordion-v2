@@ -14,13 +14,23 @@ const Collapse = ({ title, children, number }) => {
     <div className="a">
       <div className="card" aria-hidden={cardState ? "false" : "true"}>
         <header
-          className="card-header is-flex is-align-items-center "
-          style={{ cursor: "pointer" }}
+          className="card-header is-flex is-align-items-center"
+          style={{
+            cursor: "pointer",
+            borderBottom: number === "1" ? "7px solid #f2e177" : null,
+          }}
           onClick={toggleCardState}
         >
-          <span className="circle">{number}</span>
+          <span
+            className="circle"
+            style={{
+              backgroundColor: cardState ? "#176a78" : "#cccccc",
+            }}
+          >
+            {number}
+          </span>
 
-          <p className="p-5 has-text-weight-medium is-size-5">{title}</p>
+          <p className="p-4 has-text-weight-medium is-size-5">{title}</p>
         </header>
         <div
           className="card-content"
@@ -28,7 +38,9 @@ const Collapse = ({ title, children, number }) => {
             maxHeight: cardState ? 1000 : 0,
             padding: cardState ? null : 0,
             overflow: "hidden",
-            transition: "padding 250ms ease"
+            transition: "padding 250ms ease",
+            backgroundColor: "#383536",
+            color: "#fff",
           }}
         >
           <div className="content">{children} </div>
@@ -41,9 +53,9 @@ const Collapse = ({ title, children, number }) => {
 function App() {
   return (
     <div className="app">
-      <section className="container-accordion">
+      <section className="container-accordion ">
         <div className="container">
-          <div className="columns is-multiline">
+          <div className="is-multiline section-accordion">
             <Collapse title="Client Profile" number="1">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
