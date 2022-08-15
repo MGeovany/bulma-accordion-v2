@@ -29,8 +29,11 @@
   margin: 1rem 0 1rem 2rem;
 }
 
-/* select the second div on section-accordion */
-
-.container-accordion > div:nth-child(2) {
-  border: 1px solid red;
+.accordion-content > div {
+  padding: 1rem;
+  width: 100%;
+}
+.accordion-content > div:hover {
+  cursor: pointer;
+  background-color: #176a78;
 }

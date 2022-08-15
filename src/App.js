@@ -43,7 +43,9 @@ const Collapse = ({ title, children, number }) => {
             color: "#fff",
           }}
         >
-          <div className="content">{children} </div>
+          <div className="content accordion-content is-flex is-flex-direction-column is-align-content-center is-justify-content is-align-items-center">
+            {children}
+          </div>
         </div>
       </div>
     </div>
@@ -57,14 +59,9 @@ function App() {
         <div className="container">
           <div className="is-multiline section-accordion">
             <Collapse title="Client Profile" number="1">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse elementum mauris et porta mattis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse elementum mauris et porta mattis.
-              </p>
+              <div>Client Information</div>
+              <div>U.S. Citizenship</div>
+              <div>Contact Information</div>
             </Collapse>
             <Collapse title="Contact Choice" number="2">
               <p>
